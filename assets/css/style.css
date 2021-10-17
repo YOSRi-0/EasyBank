@@ -113,7 +113,7 @@ body {
   display: block;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 64rem) {
   .nav-container {
     padding-block: 0rem;
   }
@@ -124,7 +124,7 @@ body {
     flex-direction: row;
     background: transparent;
     overflow: initial;
-    padding-block: 0rem ;
+    padding-block: 0rem;
     margin: 0;
     width: auto;
     border: none;
@@ -138,11 +138,11 @@ body {
     padding-block: 2rem;
     transition: all ease-in-out 250ms;
   }
-.nav_item a::after {
+  .nav_item a::after {
     content: "";
     opacity: 0;
     transition: all ease-in-out 250ms;
-}
+  }
   .nav_item a:hover,
   .nav_item a:focus {
     color: var(--clr-primary-dark-blue);
@@ -155,15 +155,14 @@ body {
     width: 100%;
     height: 5px;
     background: linear-gradient(
-    to left,
-    var(--clr-primary-bright-cyan),
-    var(--clr-primary-lime-green)
-  );
-
+      to left,
+      var(--clr-primary-bright-cyan),
+      var(--clr-primary-lime-green)
+    );
   }
 
   .nav_item + .nav_item {
-    margin-left: 1em;
+    margin-left: 3vw;
   }
 
   .icon-toggle {
@@ -175,6 +174,7 @@ body {
     margin-right: calc(10% - 1.5rem);
   }
 }
+
 /* **************************************** HERO SECTION **************************************** */
 
 .section-hero {
@@ -187,6 +187,7 @@ body {
 
 .content {
   width: 85%;
+  max-width: 28rem;
 }
 
 .img-container {
@@ -206,19 +207,20 @@ h1 {
   margin: 0;
   font-weight: 300;
   color: var(--clr-primary-dark-blue);
+  font-size: 3rem;
 }
 
 p {
   font-weight: 300;
   color: var(--clr-neutral-grayish-blue);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 1.5em auto;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.8em 1.5em;
+  padding: 1em 2em;
   border: none;
   cursor: pointer;
   font-weight: 700;
@@ -234,7 +236,8 @@ p {
 .btn-cta:focus {
   background: linear-gradient(
     to left,
-    hsl(192.1, 60.2%, 64.5%), hsl(136.1, 58.5%, 57.5%) );
+    hsl(192.1, 60.2%, 64.5%),
+    hsl(136.1, 58.5%, 57.5%)
   );
 }
 
@@ -246,7 +249,7 @@ p {
   );
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 64rem) {
   .section-hero {
     flex-direction: row;
     justify-content: space-between;
@@ -258,6 +261,7 @@ p {
   .content {
     margin-left: calc(10% - 1.5rem);
     width: calc(25% + 10vw);
+    max-width: initial;
   }
 
   .content-hero {
@@ -268,14 +272,91 @@ p {
   .img-container {
     background-image: url("../svg/bg-intro-desktop.svg");
     order: 2;
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    transform: translateY(-15%);
+    transform: translate(15%, -25%);
+    position: relative;
+    top: -10%;
   }
 
   .img-container img {
-    max-width: 85%;
+    width: 80%;
+    transform: translateY(12%);
   }
 }
 /* **************************************** FEATURES SECTION **************************************** */
+
+.section-features {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 6rem;
+  padding-block: 3rem;
+
+  background-color: var(--clr-neutral-light-grayish-blue);
+}
+
+.features-list {
+  margin-top: 4.5rem;
+}
+
+.feature-item + .feature-item {
+  margin-top: 3.5rem;
+}
+
+h2 {
+  color: var(--clr-primary-dark-blue);
+  font-weight: 300;
+  font-size: 2rem;
+  width: 80%;
+  margin-inline: auto;
+}
+
+h4 {
+  font-weight: 300;
+  color: var(--clr-primary-dark-blue);
+  margin-block: 1rem;
+}
+
+h4 + p {
+  margin-block: 1rem;
+}
+
+@media screen and (min-width: 64rem) {
+  .section-features {
+    text-align: left;
+    margin-top: -6rem;
+    padding-block: 6rem;
+  }
+
+  .section-features > .content {
+    width: auto;
+    margin-right: calc(10% - 1.5rem);
+  }
+
+  .features-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .feature-item + .feature-item {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+
+  h2 {
+    margin-left: 0;
+  }
+
+  h2 + p {
+    width: 50%;
+    margin-left: 0;
+  }
+}
+
+/* **************************************** NAVIGATIONS **************************************** */
+
+.section-articles {
+  padding-top: 3rem;
+}
