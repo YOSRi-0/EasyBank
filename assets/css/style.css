@@ -83,7 +83,8 @@ body {
     align-items: center;
 
     background: var(--clr-neutral-light-grayish-blue);
-    padding-block: 1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
     width: 100%;
 
     position: sticky;
@@ -196,7 +197,8 @@ body {
 
 @media screen and (min-width: 64rem) {
     .nav-container {
-        padding-block: 0rem;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .nav_menu {
@@ -210,7 +212,8 @@ body {
         flex-direction: row;
         background: transparent;
         overflow: initial;
-        padding-block: 0rem;
+        padding-top: 0;
+        padding-bottom: 0;
         margin: 0;
         width: auto;
         border: none;
@@ -223,7 +226,8 @@ body {
         font-size: 1rem;
         color: var(--clr-neutral-grayish-blue);
         position: relative;
-        padding-block: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         -webkit-transition: all ease-in-out 250ms;
         -o-transition: all ease-in-out 250ms;
         transition: all ease-in-out 250ms;
@@ -402,7 +406,8 @@ p {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        margin-inline: 0;
+        margin-right: 0;
+        margin-left: 0;
         text-align: left;
         -webkit-box-align: initial;
         -ms-flex-align: initial;
@@ -460,7 +465,6 @@ p {
     justify-content: center;
     text-align: center;
     margin-top: 6rem;
-    padding-block: 3rem;
     padding-top: 3rem;
     padding-bottom: 5rem;
 
@@ -480,24 +484,28 @@ h2 {
     font-weight: 300;
     font-size: 2rem;
     width: 80%;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h4 {
     font-weight: 300;
     color: var(--clr-primary-dark-blue);
-    margin-block: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 h4 + p {
-    margin-block: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 64rem) {
     .section-features {
         text-align: left;
         margin-top: -6rem;
-        padding-block: 6rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
 
     .section-features > .content {
@@ -539,7 +547,8 @@ h4 + p {
 }
 
 .content-articles {
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .article {
@@ -597,11 +606,13 @@ h5 {
 @media screen and (min-width: 64rem) {
     .section-articles {
         text-align: left;
-        padding-block: 6rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
 
     h2 {
-        margin-block: 0 1.5rem;
+        margin-top: 0 1.5rem;
+        margin-bottom: 0 1.5rem;
     }
 
     .articles {
@@ -618,7 +629,8 @@ h5 {
 
     .section-articles > .content {
         width: auto;
-        margin-inline: calc(10% - 1.5rem);
+        margin-right: calc(10% - 1.5rem);
+        margin-left: calc(10% - 1.5rem);
     }
 
     .article {
@@ -763,7 +775,6 @@ h5 {
 
 /* @media only screen and (min-width: 768px) {
     #footer {
-        padding-inline: 30%;
     }
 } */
 
@@ -779,8 +790,7 @@ h5 {
         -webkit-box-align: stretch;
         -ms-flex-align: stretch;
         align-items: stretch;
-        padding-inline: 10rem;
-        padding-block: 3rem;
+        padding: 3rem 10rem;
     }
     #footer > * {
         margin: 0;
